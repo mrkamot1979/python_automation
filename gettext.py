@@ -17,7 +17,12 @@ class gettext():
         elemBtnOpenTab = driver.find_element_by_xpath("//a[@id='opentab']")
         getTextElemBtnOpenTab = elemBtnOpenTab.text
 
+
+        elemBtnOpenWindow = driver.find_element_by_xpath("//button[@id='openwindow']")
+        getTextElemBtnOpenWindow = elemBtnOpenWindow.text
+
         print("The text of the element is " + getTextElemBtnOpenTab)
+        print("The text of the element is " + getTextElemBtnOpenWindow)
 
 
 nr = gettext()
