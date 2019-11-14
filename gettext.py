@@ -24,6 +24,11 @@ class gettext():
         print("The text of the element is " + getTextElemBtnOpenTab)
         print("The text of the element is " + getTextElemBtnOpenWindow)
 
+        if getTextElemBtnOpenWindow == "Open Window1":
+            print("Element text correct")
+        else:
+            print("Error")
+
 
 nr = gettext()
 nr.test()
