@@ -25,9 +25,15 @@ class handrywrappers():
 
     def getElement(self, locatorName, locatorType = "id"):
         element = None #element variable holder initialied as "none"
-        locatorType = locatortype.lower()
-        locatorType = self.getByType(locatorType) #get locatorType by using the getByType function
+        try:
 
+            locatorType = locatortype.lower()
+            byType = self.getByType(locatorType) #get locatorType by using the getByType function
+            element = self.driver.find_element(byType, locatorName)
+            print("Element found")
+        except:
+            print("Not found")
+        return element
 
 
 
