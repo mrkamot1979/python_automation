@@ -1,16 +1,41 @@
 from selenium.webdriver.common.by import By
 
+
 class handrywrappers():
 
     def __init__(self, driver):
         self.driver = driver
 
-    def getByType(self, locatortype):
-        locatortype = locatortype.lower()
+    def getByType(self, locatorType):
+        locatorType = locatorType.lower()
 
-        if locatortype = "id":
+        if locatorType == "id":
             return By.ID
-        elif locatortype = "xpath"
+        elif locatorType == "xpath":
             return By.XPATH
+        elif locatorType == "css":
+            return By.CSS_SELECTOR
+        elif locatorype == "classname":
+            return By.CLASS_NAME
+        elif locatorType == "linktext":
+            return By.LINK_TEXT
+        else:
+            print("Sorry the locator " + locatorType + " is not recognized")
+            return False
+
+    def getElement(self, locatorName, locatorType = "id"):
+        element = None #element variable holder initialied as "none"
+        locatorType = locatortype.lower()
+        locatorType = self.getByType(locatorType) #get locatorType by using the getByType function
+
+
+
+
+
+
+
+
+
+
 
 
