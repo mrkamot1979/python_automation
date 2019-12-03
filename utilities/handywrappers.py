@@ -27,7 +27,7 @@ class handywrappers():
         element = None #element variable holder initialied as "none"
         try:
 
-            locatorType = locatortype.lower()
+            locatorType = locatorType.lower()
             byType = self.getByType(locatorType) #get locatorType by using the getByType function
             element = self.driver.find_element(byType, locatorName)
             print("Element found")

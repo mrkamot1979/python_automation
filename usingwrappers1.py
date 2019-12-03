@@ -31,6 +31,7 @@ class UsingWrappers1():
         time.sleep(2)
         textField2 = hw.getElement("//input[@id='name']", locatorType="xpath")
         textField2.clear()
+        time.sleep(2)
 
 nr = UsingWrappers1()
 nr.test()
