@@ -1,7 +1,8 @@
 from selenium import webdriver
+from utilities.handywrappers import handywrappers
+from selenium.webdriver.common.by import By
 import time, os
-from selenium.webdriver.support.select import Select
-from utilities.handywrappers import handrywrappers
+
 
 
 
@@ -15,19 +16,22 @@ class UsingWrappers1():
         baseURL = "https://learn.letskodeit.com/p/practice"
 
         driver.maximize_window()
+        driver.implicitly_wait(10)
+
+        hw = handywrappers(driver)
+
         driver.get(baseURL)
 
 
-        hw = HandyWrappers(driver)
 
-        driver.implicitly_wait(10)
 
         textField1 = hw.getElement("name")
+
         textField1.send_keys("Test")
         time.sleep(2)
         textField2 = hw.getElement("//input[@id='name']", locatorType="xpath")
         textField2.clear()
 
-ff = UsingWrappers1()
-ff.test()
+nr = UsingWrappers1()
+nr.test()
 

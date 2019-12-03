@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
-class handrywrappers():
+class handywrappers():
 
     def __init__(self, driver):
         self.driver = driver
@@ -32,7 +32,7 @@ class handrywrappers():
             element = self.driver.find_element(byType, locatorName)
             print("Element found")
         except:
-            print("Not found")
+            print("Not found1")
         return element
 
 
