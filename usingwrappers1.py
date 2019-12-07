@@ -14,16 +14,12 @@ class UsingWrappers1():
         os.environ["webdriver.chrome.driver"] = driverLocation
         driver = webdriver.Chrome(driverLocation)
         baseURL = "https://learn.letskodeit.com/p/practice"
-
         driver.maximize_window()
         driver.implicitly_wait(10)
 
         hw = handywrappers(driver)
 
         driver.get(baseURL)
-
-
-
 
         textField1 = hw.getElement("name")
 
