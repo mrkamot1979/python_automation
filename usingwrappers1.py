@@ -21,13 +21,18 @@ class UsingWrappers1():
 
         driver.get(baseURL)
 
-        textField1 = hw.getElement("name")
+        elementResult = hw.isElementPresent("nenu", By.ID)
+        print(str(elementResult))
 
+
+        """
+        textField1 = hw.getElement("name")
         textField1.send_keys("Test")
         time.sleep(2)
         textField2 = hw.getElement("//input[@id='name']", locatorType="xpath")
         textField2.clear()
         time.sleep(2)
+        """
 
 nr = UsingWrappers1()
 nr.test()

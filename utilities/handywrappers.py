@@ -36,6 +36,22 @@ class handywrappers():
         return element
 
 
+    def isElementPresent(self, locatorAttributeName, byType):
+        try:
+            element = self.driver.find_element(byType, locatorAttributeName)
+            if element is not None:
+                print("Element found")
+                return True
+            else:
+                print("Element not found")
+                return False
+        except:
+            print("Element not found")
+            return False
+
+
+
+
 
 
 
