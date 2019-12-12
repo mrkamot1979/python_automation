@@ -21,7 +21,7 @@ class UsingWrappers1():
 
         driver.get(baseURL)
 
-        elementResult = hw.isElementPresent("nenu", By.ID)
+        elementResult = hw.elementPresenceCheck("name", By.ID)
         print(str(elementResult))
 
 
