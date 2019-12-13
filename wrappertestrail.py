@@ -17,7 +17,10 @@ class wrappertestrail():
         hw = handywrappers(driver)
 
         username = hw.getElement("name")
-        username.send_keys("test")
+        username.send_keys("rogelio.roldan@rakuten.com")
+        time.sleep(10)
+        pword = hw.getElement("password")
+        pword.send_keys("ebak")
         time.sleep(10)
 
 thet = wrappertestrail()
